@@ -1,0 +1,126 @@
+ARM GAS  C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/main.c"
+  20              		.section	.text.main,"ax",%progbits
+  21              		.align	1
+  22              		.global	main
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	main:
+  28              	.LFB130:
+   1:Core/Src/main.c **** #include "../Inc/Init.h"
+   2:Core/Src/main.c **** 
+   3:Core/Src/main.c **** int cup = 1, flag = 1;
+   4:Core/Src/main.c **** 
+   5:Core/Src/main.c **** bool flag0 = 1;
+   6:Core/Src/main.c **** bool flag1 = 1;
+   7:Core/Src/main.c **** 
+   8:Core/Src/main.c **** 
+   9:Core/Src/main.c **** 
+  10:Core/Src/main.c **** int delay = 50000;
+  11:Core/Src/main.c **** int T1 = 4;
+  12:Core/Src/main.c **** int T0 = 2;
+  13:Core/Src/main.c **** 
+  14:Core/Src/main.c **** int main(void)
+  15:Core/Src/main.c **** {
+  29              		.loc 1 15 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  16:Core/Src/main.c ****     //task1();
+  17:Core/Src/main.c ****     task2();
+  38              		.loc 1 17 5 view .LVU1
+  39 0002 FFF7FEFF 		bl	task2
+  40              	.LVL0:
+  18:Core/Src/main.c **** }...
+ARM GAS  C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s 			page 2
+
+
+  41              		.loc 1 18 1 is_stmt 0 view .LVU2
+  42 0006 0020     		movs	r0, #0
+  43 0008 08BD     		pop	{r3, pc}
+  44              		.cfi_endproc
+  45              	.LFE130:
+  47              		.global	T0
+  48              		.section	.data.T0,"aw"
+  49              		.align	2
+  52              	T0:
+  53 0000 02000000 		.word	2
+  54              		.global	T1
+  55              		.section	.data.T1,"aw"
+  56              		.align	2
+  59              	T1:
+  60 0000 04000000 		.word	4
+  61              		.global	delay
+  62              		.section	.data.delay,"aw"
+  63              		.align	2
+  66              	delay:
+  67 0000 50C30000 		.word	50000
+  68              		.global	flag1
+  69              		.section	.data.flag1,"aw"
+  72              	flag1:
+  73 0000 01       		.byte	1
+  74              		.global	flag0
+  75              		.section	.data.flag0,"aw"
+  78              	flag0:
+  79 0000 01       		.byte	1
+  80              		.global	flag
+  81              		.section	.data.flag,"aw"
+  82              		.align	2
+  85              	flag:
+  86 0000 01000000 		.word	1
+  87              		.global	cup
+  88              		.section	.data.cup,"aw"
+  89              		.align	2
+  92              	cup:
+  93 0000 01000000 		.word	1
+  94              		.text
+  95              	.Letext0:
+  96              		.file 2 "Core/Src/../Inc/Init.h"
+ARM GAS  C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:21     .text.main:00000000 $t
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:27     .text.main:00000000 main
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:52     .data.T0:00000000 T0
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:49     .data.T0:00000000 $d
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:59     .data.T1:00000000 T1
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:56     .data.T1:00000000 $d
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:66     .data.delay:00000000 delay
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:63     .data.delay:00000000 $d
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:72     .data.flag1:00000000 flag1
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:78     .data.flag0:00000000 flag0
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:85     .data.flag:00000000 flag
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:82     .data.flag:00000000 $d
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:92     .data.cup:00000000 cup
+C:\Users\671D~1\AppData\Local\Temp\ccQr2R8D.s:89     .data.cup:00000000 $d
+
+UNDEFINED SYMBOLS
+task2
